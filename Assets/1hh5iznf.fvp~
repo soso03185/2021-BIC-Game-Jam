@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DrawingLine : MonoBehaviour
+{
+    private UnityEngine.UI.Extensions.UILineRenderer line;
+
+    [SerializeField] private int screenX;
+    [SerializeField] private int screenY;
+
+    [SerializeField] private int minCount;
+    [SerializeField] private int maxCount;
+
+    private int curCount;
+
+    private void Awake()
+    {
+        line = GetComponent<UnityEngine.UI.Extensions.UILineRenderer>();
+
+    }
+
+    private void Start()
+    {
+        curCount = Random.Range(minCount, maxCount);
+
+        StartCoroutine(Routine());
+    }
+
+    private IEnumerator Routine()
+    {
+        float randTime = 0;
+        int count = 0;
+        while (count < curCount)
+        {
+            randTime = Random.Range(0.1f, 1f);
+
+            float posX = Random.Range(-screenX, screenX);
+            float posY = Random.Range(-screenY, screenY);
+
+            line.Points[count++] = new Vector2(posX, posY);
+
+            yield return new WaitForSecondsRealtime(randTime);
+        }
+
+    }
+
+}
