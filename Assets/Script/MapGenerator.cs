@@ -11,13 +11,21 @@ public class MapGenerator : MonoBehaviour
 
     private void Start()
     {
-        //percent = 100 / mapObj.Length;
-
-        for (int i = 0; i < mapSize; i++)
+        int rand = 0;
+        int history = 0;
+        for (int i = 1; i < mapSize; i++)
         {
-            int rand = Random.Range(0, 100);
-            
+            rand = Random.Range(0, mapObj.Length);
+            if (mapObj.Length != 1)
+            {
+                while (rand != history)
+                {
+                    rand = Random.Range(0, mapObj.Length);
+                }
+                history = rand;
+            }    
 
+            Instantiate(mapObj[rand], new Vector2(19.2f * i, 0), Quaternion.identity, transform);
         }
     }    
 
