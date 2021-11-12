@@ -3,56 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class OptionVolume : MonoBehaviour
 {
-    public String type;
-    public Image[] bars;
+    public AudioMixer masterMixer;
 
-    private int level;
+    public Slider audioSlider;
 
-    private int Level
+    public void AudioControl()
     {
-        get
-        {
-            return level;
-        }
-        set
-        {
-            level = value;
-            while (level > bars.Length)
-            {
-                level = 0;
-            }
-
-            for (int i = level; i < bars.Length; i++)
-            {
-                bars[i].enabled = false;
-            }
-
-            for (int i = 0; i < level; i++)
-            {
-                bars[i].enabled = true;
-            }
-
-            if (type.Trim().ToLower() == "bgm")
-            {
-                SoundManager.Instance.SetBGMVolume((float)level / bars.Length);
-            }
-            else if (type.Trim().ToLower() == "sfx")
-            {
-                SoundManager.Instance.SetSFXVolume((float)level / (float)bars.Length);
-            }
-        }
+        float sound = audioSlider.value;
+        if (sound == -40f) masterMixer.SetFloat("BGM", -80);
+        else masterMixer.SetFloat("BGM", sound);
     }
 
-    private void Start()
+    public void SFXAudioControl()
     {
-        Level = bars.Length;
+        float sound = audioSlider.value;
+        if (sound == -40f) masterMixer.SetFloat("SFX", -80);
+        else masterMixer.SetFloat("SFX", sound);
     }
 
-    public void NextLevel()
+    public void ToggleAudioVolume()
     {
-        Level += 1;
+        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
 }
