@@ -6,9 +6,8 @@ using static Define;
 public class PlayerMove : MonoBehaviour
 {
     public float Speed = 10f;
-    bool _isRun = false;
+
     Rigidbody2D _rigid;
-    SpriteRenderer _spriteRenderer;
     Animator _anim;
 
     public CharacterState _state = CharacterState.Idle;
@@ -44,7 +43,6 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
     }
     void Update()
@@ -81,19 +79,20 @@ public class PlayerMove : MonoBehaviour
             {
                 case MoveDir.Left:
                     _rigid.velocity = new Vector2(-Speed, _rigid.velocity.y);
-
-                    //_anim.Play("??????? ???");
+                    _anim.SetFloat("Reverse", -1.0f);
+                    _anim.Play("Player_Walking");
                     break;
 
                 case MoveDir.Right:
                     _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
-
-                    //_anim.Play("??????? ???");
+                    _anim.SetFloat("Reverse", 1.0f);
+                    _anim.Play("Player_Walking");
                     break;
 
                 case MoveDir.None:
                     _rigid.velocity = new Vector2(0, _rigid.velocity.y);
-                    //_anim.Play("??????? ???");
+                    _anim.SetFloat("Reverse", 1.0f);
+                    _anim.Play("Player_Idle");
                     break;
             }
         }
@@ -104,20 +103,19 @@ public class PlayerMove : MonoBehaviour
             switch (_dir)
             {
                 case MoveDir.Left:
-                    _rigid.velocity = new Vector2(-Speed, _rigid.velocity.y);
-
-                    //_anim.Play("??????? ???");
+                    _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
+                    _anim.Play("Player_Run");
                     break;
 
                 case MoveDir.Right:
                     _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
 
-                    // _anim.Play("??????? ???");
+                     _anim.Play("Player_Run");
                     break;
 
                 case MoveDir.None:
                     _rigid.velocity = new Vector2(0, _rigid.velocity.y);
-                    //_anim.Play("??????? ???");
+                    _anim.Play("Player_Idle");
                     break;
             }
         }
