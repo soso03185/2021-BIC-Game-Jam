@@ -10,11 +10,16 @@ public class TitleUI : MonoBehaviour
 
     public void Play()
     {
-   //     SceneManager.LoadScene(1);
+        Invoke("GameStart", 1f);
     }
 
     public void Exit()
     {
         Application.Quit();
+    }
+
+    void GameStart()
+    {
+        SceneManager.LoadScene(1);
     }
 }
