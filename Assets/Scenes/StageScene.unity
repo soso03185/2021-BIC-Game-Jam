@@ -2862,7 +2862,8 @@ GameObject:
   - component: {fileID: 932720685}
   - component: {fileID: 932720688}
   - component: {fileID: 932720689}
-  m_Layer: 6
+  - component: {fileID: 932720690}
+  m_Layer: 0
   m_Name: World Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3001,6 +3002,23 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &932720690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932720684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 1
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 4c5c27d1c2764db4ab2e3b64e11d3e0b, type: 2}
 --- !u!1 &942363402
 GameObject:
   m_ObjectHideFlags: 0
