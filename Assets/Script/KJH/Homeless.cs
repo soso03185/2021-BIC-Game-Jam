@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class Homeless : MonoBehaviour
 {
+    [SerializeField] Camera volumeCam;
+    public Text _shoutText;
     public GameObject _effectShout;
     public Transform _playerPosition;
     public Sprite Right;
@@ -42,7 +45,6 @@ public class Homeless : MonoBehaviour
     public void AngryHomeless()
     {
         _co = StartCoroutine("eventHomeless");
-
     }
 
     IEnumerator eventHomeless()
@@ -51,8 +53,12 @@ public class Homeless : MonoBehaviour
         _isAngry = true;
         _effectShout.SetActive(true);
         _spriteRenderer.sprite = Forward;
-        yield return new WaitForSeconds(1f);
-        _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 5.0f);
+        _shoutText.fontSize = 4000;
+        SoundManager.Instance.PlayVFX("Homeless");
+        yield return new WaitForSeconds(0.3f);
+
+        _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 10.0f);
+        _shoutText.fontSize = 300;
         _co = null;
     }
 }
