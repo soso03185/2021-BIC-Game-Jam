@@ -14,6 +14,6 @@ public class Truck : MonoBehaviour
 
     private IEnumerator Routine()
     {
-
+        yield return new WaitForSeconds(1) ;
     }
 }
