@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StreatLamp : MonoBehaviour
+{
+    private GameObject lightObj;
+
+
+    private void Awake()
+    {
+        lightObj = transform.GetChild(0).gameObject;
+
+    }
+
+    private void Start()
+    {
+        Event();
+    }
+
+    public void Event()
+    {
+        StartCoroutine(Routine());
+    }
+
+    private IEnumerator Routine()
+    {
+        int count = 0;        
+        while (count < 5)
+        {
+            lightObj.SetActive(false);
+            yield return new WaitForSecondsRealtime(2f);
+        }        
+    }
+}

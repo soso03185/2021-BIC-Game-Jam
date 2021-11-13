@@ -12,6 +12,7 @@ public class StudentState : FSM
         time = 0;
         Debug.Log("Start Student State ");
         npc.SetWalkState(true);
+        npc.transform.position = npc.player.transform.position + new Vector3(-10.5f, 0);
     }
 
     public override void Excute(NPC npc)
