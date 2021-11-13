@@ -5,22 +5,21 @@ using UnityEngine;
 public class IdleState : FSM
 {
     private float time;
-    private float checkTime = 5;
-
-    private Vector2 startPos;
+    private float checkTime = 5;    
 
 
     public override void Enter(NPC npc)
     {
         time = 0;                
         
-        Debug.Log("Start Idle State" + " " + startPos);
+        Debug.Log("Start Idle State");
         npc.SetWalkState(false);
     }
 
     public override void Excute(NPC npc)
     {
-        if (checkTime < time) npc.ChangeState(npc.Student());
+        if (npc.player.Dir != Define.MoveDir.None) npc.ChangeState(npc.Criminal());
+        else if (checkTime < time) npc.ChangeState(npc.Student());
         time += Time.deltaTime;         
     }
 
