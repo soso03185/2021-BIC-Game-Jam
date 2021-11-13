@@ -59,7 +59,7 @@ MonoBehaviour:
   settings:
     renderPassEvent: 500
     type: 2
-    blend: 0.29
+    blend: 0.183
     frequency: 10
     interference: 130
     noise: 0.15
