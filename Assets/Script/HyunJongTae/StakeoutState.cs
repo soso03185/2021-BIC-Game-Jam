@@ -5,7 +5,7 @@ using UnityEngine;
 public class StakeoutState : FSM
 {
     private float time;
-    private float checkTime = 5;
+    private float checkTime = 3;
 
     public override void Enter(NPC npc)
     {

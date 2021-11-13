@@ -1276,6 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d0646275fc60c4499ba26ffcffc3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeCam: {fileID: 932720686}
+  _shoutText: {fileID: 793784758}
   _effectShout: {fileID: 1076243865}
   _playerPosition: {fileID: 1218173853}
   Right: {fileID: -5197268214703973851, guid: 276fc9f58fbb9429bb12d5f9e7e833e0, type: 3}
@@ -3675,7 +3677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7152079812250853345, guid: 303a0a0d8bf37664a9cf79424ab8996e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7152079812250853345, guid: 303a0a0d8bf37664a9cf79424ab8996e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4992,7 +4994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7152079812250853345, guid: 303a0a0d8bf37664a9cf79424ab8996e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7152079812250853345, guid: 303a0a0d8bf37664a9cf79424ab8996e, type: 3}
       propertyPath: m_LocalPosition.x

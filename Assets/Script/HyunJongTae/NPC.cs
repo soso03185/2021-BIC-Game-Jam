@@ -13,6 +13,9 @@ public class NPC : MonoBehaviour
 
     private bool stop = true;
 
+    private float time;
+    private float checkTime = 8;
+
     #region FSM
     private FSM idleState = new IdleState();
     private FSM studentState = new StudentState();
@@ -46,7 +49,12 @@ public class NPC : MonoBehaviour
     private void FixedUpdate()
     {        
         if (!stop) curState.Excute(this);
-
+        time += Time.deltaTime;
+        if (time > checkTime)
+        {
+            walkSpeed *= 1.2f;
+            time = 0;
+        }
     }
 
     public void Event(int value)
