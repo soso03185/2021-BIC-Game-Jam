@@ -16,7 +16,7 @@ public class StakeoutState : FSM
     public override void Excute(NPC npc)
     {
         time += Time.deltaTime;
-        if (time > checkTime) npc.ChangeState(npc.Idle());        
+        if (time > checkTime) npc.ChangeState(npc.Criminal());        
     }
 
     public override void Exit(NPC npc)
