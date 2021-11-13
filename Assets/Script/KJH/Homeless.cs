@@ -7,10 +7,6 @@ public class Homeless : MonoBehaviour
     public Transform _playerPosition;
 
     private void Update()
-    {
-        if(transform.position)
-        {
-
-        }    
+    { 
     }
 }

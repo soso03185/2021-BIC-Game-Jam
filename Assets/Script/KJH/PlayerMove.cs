@@ -5,7 +5,7 @@ using static Define;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float Speed = 10f;
+    public float Speed { get; set; } = 10f;
 
     Rigidbody2D _rigid;
     Animator _anim;
