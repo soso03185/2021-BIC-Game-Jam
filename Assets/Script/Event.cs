@@ -5,7 +5,7 @@ public class Event : MonoBehaviour
 {
     public bool isActivated { get; set; } = false;
 
-    public int index = 0;
+    public int index = 99;
 
     [SerializeField] private UnityEvent OnActivate;
 
@@ -17,6 +17,7 @@ public class Event : MonoBehaviour
             this.isActivated = true;
 
             Stage.currentActivatedTriggers.Add(this.index);
+            gameObject.SetActive(false);
         }
         
     }
