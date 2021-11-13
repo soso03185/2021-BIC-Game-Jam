@@ -140,4 +140,9 @@ public class PlayerMove : MonoBehaviour
         else
             Dir = MoveDir.None;
     }
+    void Foot()
+    {
+        SoundManager.Instance.PlayVFX("Stone footstep 7");
+    }
+
 }
