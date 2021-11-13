@@ -11,13 +11,9 @@ public class StreatLamp : MonoBehaviour
     {
         lightObj = transform.GetChild(0).gameObject;
         shadow = transform.GetChild(1).gameObject;
-    }
 
-    private void Start()
-    {
         shadow.SetActive(false);
-        Event();
-    }
+    }    
 
     public void Event()
     {
@@ -33,11 +29,11 @@ public class StreatLamp : MonoBehaviour
             if (lightObj.activeSelf) lightObj.SetActive(false);
             else lightObj.SetActive(true);
             count++;
+            if (count == 10) shadow.SetActive(true);
             yield return new WaitForSeconds(0.8f);
         }
-
-        shadow.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        
+        yield return new WaitForSeconds(0.5f);
         lightObj.SetActive(false);
         shadow.SetActive(false);
         yield return new WaitForSeconds(0.5f);
