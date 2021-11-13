@@ -6,4 +6,14 @@ public class Truck : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+
+    private void Start()
+    {
+        
+    }
+
+    private IEnumerator Routine()
+    {
+
+    }
 }
