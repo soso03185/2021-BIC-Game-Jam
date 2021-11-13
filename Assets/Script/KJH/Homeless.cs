@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Homeless : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Homeless : MonoBehaviour
     public Sprite Forward;
     public Sprite None;
     bool _isAngry = false;
-    float colorAlpha = 1f;
+    float colorAlpha = 0f;
 
     Coroutine _co = null;
     SpriteRenderer _spriteRenderer;
@@ -25,7 +26,6 @@ public class Homeless : MonoBehaviour
     private void Update()
     {
         _effectShout.transform.position = _playerPosition.position + new Vector3(0, 2, 0);
-        _effectShout.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, colorAlpha);
 
         float playerPo = transform.position.x - _playerPosition.position.x;
 
@@ -39,9 +39,10 @@ public class Homeless : MonoBehaviour
         }
     }
 
-    void AngryHomeless()
+    public void AngryHomeless()
     {
         _co = StartCoroutine("eventHomeless");
+
     }
 
     IEnumerator eventHomeless()
@@ -51,10 +52,7 @@ public class Homeless : MonoBehaviour
         _effectShout.SetActive(true);
         _spriteRenderer.sprite = Forward;
         yield return new WaitForSeconds(1f);
-
-        colorAlpha -= Time.deltaTime * 0.1f;
+        _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 5.0f);
         _co = null;
-
-        yield return new WaitForSeconds(3f);
     }
 }
