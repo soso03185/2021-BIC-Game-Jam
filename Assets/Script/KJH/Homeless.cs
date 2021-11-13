@@ -51,6 +51,8 @@ public class Homeless : MonoBehaviour
         _isAngry = true;
         _effectShout.SetActive(true);
         _spriteRenderer.sprite = Forward;
+
+        SoundManager.Instance.PlayVFX("Homeless");
         yield return new WaitForSeconds(1f);
         _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 5.0f);
         _co = null;
