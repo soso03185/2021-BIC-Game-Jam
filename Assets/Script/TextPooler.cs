@@ -5,32 +5,31 @@ using UnityEngine.UI;
 
 public class TextPooler : MonoBehaviour
 {
-    public Text[] texts;
+    public TextElement[] texts;
     public RectTransform ButtonPanel;
-    public Text FirstText;
-    public Text LastText;
+    public TextElement FirstText;
+    public TextElement LastText;
 
-    public Transform GetFirstText(int stageindex =0)
+    public TextElement GetFirstText(int stageindex =0)
     {
         FirstText.text = GameStringBuilder.StageFirstString(stageindex);
-        return FirstText.transform;
+        return FirstText;
     }
 
-    public Transform GetLastText(int stageindex = 0)
+    public TextElement GetLastText(int stageindex = 0)
     {
         LastText.text = GameStringBuilder.StageLastString(stageindex);
-        return LastText.transform;
+        return LastText;
     }
 
-    public Transform GetEventText(int eventindex =0)
+    public TextElement GetEventText(int eventindex =0)
     {
         for(int i=0;i<texts.Length;i++)
         {
             if (!texts[i].gameObject.activeInHierarchy)
             {
                 texts[i].text = GameStringBuilder.EventString(eventindex);
-                texts[i].gameObject.SetActive(true);
-                return texts[i].transform;
+                return texts[i];
                 
             }
         }
