@@ -12,7 +12,7 @@ public class StreatLamp : MonoBehaviour
         lightObj = transform.GetChild(0).gameObject;
         shadow = transform.GetChild(1).gameObject;
 
-        shadow.SetActive(true);
+        shadow.SetActive(false);
     }    
 
     public void Event()
