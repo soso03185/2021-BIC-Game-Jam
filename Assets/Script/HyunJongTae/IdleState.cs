@@ -18,8 +18,7 @@ public class IdleState : FSM
 
     public override void Excute(NPC npc)
     {
-        if (npc.player.Dir != Define.MoveDir.None) npc.ChangeState(npc.Criminal());
-        else if (checkTime < time) npc.ChangeState(npc.Student());
+        if (npc.player.Dir == Define.MoveDir.Right) npc.ChangeState(npc.Criminal());       
         time += Time.deltaTime;         
     }
 
