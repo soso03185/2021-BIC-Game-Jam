@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Homeless : MonoBehaviour
 {
-    [SerializeField] Camera volumeCam;
+    [SerializeField] UnityEngine.Rendering.Universal.UniversalAdditionalCameraData volumeCam;
     public Text _shoutText;
     public GameObject _effectShout;
     public Transform _playerPosition;
@@ -15,7 +15,6 @@ public class Homeless : MonoBehaviour
     public Sprite Forward;
     public Sprite None;
     bool _isAngry = false;
-    float colorAlpha = 0f;
 
     Coroutine _co = null;
     SpriteRenderer _spriteRenderer;
@@ -53,12 +52,16 @@ public class Homeless : MonoBehaviour
         _isAngry = true;
         _effectShout.SetActive(true);
         _spriteRenderer.sprite = Forward;
-        _shoutText.fontSize = 4000;
-        SoundManager.Instance.PlayVFX("Homeless");
-        yield return new WaitForSeconds(0.3f);
-
-        _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 10.0f);
         _shoutText.fontSize = 300;
+        SoundManager.Instance.PlayVFX("Homeless");
+        yield return new WaitForSeconds(0.1f);
+
+        volumeCam.SetRenderer(1);
+        _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 10.0f);
+        _shoutText.fontSize = 100;
+        yield return new WaitForSeconds(5f);
+
+        volumeCam.SetRenderer(0);
         _co = null;
     }
 }
