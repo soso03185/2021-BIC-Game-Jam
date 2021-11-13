@@ -144,6 +144,7 @@ public class PlayerMove : MonoBehaviour
     void Foot()
     {
         SoundManager.Instance.SetSFXVolume(0.2f);
+
         SoundManager.Instance.PlayVFX("Walk_right");
     }
 
