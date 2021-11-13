@@ -8,9 +8,9 @@ public class GameStringBuilder : MonoBehaviour
     public static GameStringBuilder Instance { get { return _instance; } set { _instance = value; } }
 
 
-    public string[] StageFirstStrings;
-    public string[] EventStrings;
-    public string[] StageLastStrings;
+    [TextArea] public string[] StageFirstStrings;
+    [TextArea] public string[] EventStrings;
+    [TextArea] public string[] StageLastStrings;
 
     private void Awake()
     {
