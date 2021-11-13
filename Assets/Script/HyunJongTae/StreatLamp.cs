@@ -65,7 +65,7 @@ public class StreatLamp : MonoBehaviour
         lightObj.SetActive(true);
         catObj.SetActive(true);
 
-        yield return new WaitForSecondsRealtime(0.8f);
+        yield return new WaitForSecondsRealtime(0.5f);
         SoundManager.Instance.PlayVFX("Catmeow6");
     }
 }

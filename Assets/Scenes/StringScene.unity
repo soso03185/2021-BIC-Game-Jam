@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 369396613}
   - component: {fileID: 369396612}
   - component: {fileID: 369396614}
+  - component: {fileID: 369396615}
   m_Layer: 5
   m_Name: Last Text
   m_TagString: Untagged
@@ -254,7 +255,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1084.9999, y: 410.76025}
-  m_SizeDelta: {x: 1670, y: 99.71}
+  m_SizeDelta: {x: 1670, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369396612
 MonoBehaviour:
@@ -287,7 +288,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &369396613
@@ -313,6 +314,20 @@ MonoBehaviour:
   text: 
   textUI: {fileID: 0}
   isTypeComplete: 0
+--- !u!114 &369396615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369396610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &679452942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1072,7 @@ GameObject:
   - component: {fileID: 885655236}
   - component: {fileID: 885655238}
   - component: {fileID: 885655239}
+  - component: {fileID: 885655240}
   m_Layer: 5
   m_Name: First Text
   m_TagString: Untagged
@@ -1081,7 +1097,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 1084.9999, y: -429.7402}
-  m_SizeDelta: {x: 1670, y: 99.71}
+  m_SizeDelta: {x: 1670, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885655236
 MonoBehaviour:
@@ -1114,7 +1130,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &885655237
@@ -1155,6 +1171,20 @@ MonoBehaviour:
   text: 
   textUI: {fileID: 0}
   isTypeComplete: 0
+--- !u!114 &885655240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885655234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &1188402963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 137.44998, y: 0.0000071526}
+  m_AnchoredPosition: {x: 137.44998, y: -11.290001}
   m_SizeDelta: {x: 274.9, y: 99.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328027429
@@ -1570,8 +1600,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageFirstStrings:
-  - "<size=55>9*.08.12.</size> \uC6D4\uC694\uC77C\n<size=55>\uC624\uB298\uC740 \uD559\uAD50\uAC00
-    \uB2A6\uAC8C \uB9C8\uCE5C\uB2E4\uACE0 \uD588\uB2E4.</size>"
+  - "<size=55>9*.08.12.</size> \uC6D4\uC694\uC77C\n<size=55>\uC624\uB298\uBD80\uD130
+    1\uC8FC\uC77C\uB3D9\uC548 \uD559\uAD50\uAC00 \uB2A6\uAC8C \uB9C8\uCE5C\uB2E4\uACE0
+    \uD588\uB2E4.</size>\n<size=55>\uC2DC\uAC04\uC774 \uB2A6\uC5C8\uC73C\uB2C8\uAE50
+    \uC9D1\uC5D0 \uC5BC\uB978 \uB3CC\uC544\uAC00\uC57C\uACA0\uB2E4\uACE0 \uC0DD\uAC01\uD588\uB2E4..</size>\n"
   - "<size=55>9*.08.13.</size> \uD654\uC694\uC77C"
   - "<size=55>9*.08.14.</size> \uC218\uC694\uC77C"
   - "<size=55>9*.08.15.</size> \uBAA9\uC694\uC77C"
@@ -1583,7 +1615,7 @@ MonoBehaviour:
   - "3\uBC88 \uC774\uBCA4\uD2B8\uB3C4 \uB2F9\uD588\uACE0,"
   - "4\uBC88 \uC774\uBCA4\uD2B8\uB3C4 \uB2F9\uD588\uACE0,"
   StageLastStrings:
-  - "\uB0B4\uC77C\uC740 \uC880 \uC11C\uB458\uB7EC\uC57C\uC9C0."
+  - "<size=50>\uB0B4\uC77C\uC740 \uC880 \uC11C\uB458\uB7EC\uC57C \uD560\uAC83 \uAC19\uB2E4.</size>"
   - "\uB108\uBB34 \uD798\uB4E4\uB2E4.."
   - "\uC694\uC998\uB530\uB77C \uC65C \uC774\uB7EC\uC9C0?"
   - "\uB108\uBB34 \uBB34\uC12D\uB2E4.."
@@ -1601,6 +1633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Eventtext: {fileID: 1742402740}
+  typingspeed: 0.1
 --- !u!114 &1351750843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,9 +1657,9 @@ AudioSource:
   m_GameObject: {fileID: 1351750838}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1c5c3281cd8c7f84fa13b8e1b15192fd, type: 3}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: -1744607753994174872, guid: 01a8bb8b9618ff04db9c7b9c45294ee8, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9161bcdd991cc46448f38e9bb58c218f, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2184,6 +2217,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 538.47, y: -329.89008}
-  m_SizeDelta: {x: 989.47, y: 99.99}
+  m_AnchoredPosition: {x: 538.47, y: -341.18}
+  m_SizeDelta: {x: 989.47, y: 122.57}
   m_Pivot: {x: 0.5, y: 0.5}
