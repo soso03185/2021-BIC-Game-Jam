@@ -33,15 +33,16 @@ public class Stage : MonoBehaviour
                 item.isActivated = eventtriggers[item.index];
             }
 
-            int random;
-            do { random = Random.Range(0, events.Length); }
-            while (events[random].isActivated == true);
+            int randomamount = Random.Range(1, 2);
+            for(int i=0; i<randomamount; i++)
+            {
+                int random;
+                do { random = Random.Range(0, events.Length); }
+                while (events[random].isActivated == true);
 
-            events[random].gameObject.SetActive(true);
-            
-            
+                events[random].gameObject.SetActive(true);
+            }
         }
-
         
     }
 
