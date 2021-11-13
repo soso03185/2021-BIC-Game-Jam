@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     private Animator ani;
-    private Transform player;
+    public PlayerMove player { get; private set; }
 
     [SerializeField] private float walkSpeed;
 
@@ -13,10 +13,12 @@ public class NPC : MonoBehaviour
     private FSM idleState = new IdleState();
     private FSM studentState = new StudentState();
     private FSM criminalStaete = new CriminalState();
+    private FSM stakeOutState = new StakeoutState();
 
     public FSM Idle() { return idleState; }
     public FSM Student() { return studentState; }
     public FSM Criminal() { return criminalStaete; }
+    public FSM StakeOut() { return stakeOutState; }
 
     private FSM curState;
 
@@ -25,12 +27,12 @@ public class NPC : MonoBehaviour
     private void Awake()
     {
         ani = GetComponent<Animator>();
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
     }
 
     private void Start()
     {
-        curState = Idle();
+        curState = StakeOut();
         curState.Enter(this);
     }
 
@@ -38,6 +40,19 @@ public class NPC : MonoBehaviour
     {
         curState.Excute(this);
 
+    }
+
+    public void Event(int value)
+    {
+        if (value == 0)
+        {
+            curState = StakeOut();            
+        }
+        else if (value == 1)
+        {
+            curState = Student();            
+        }
+        curState.Enter(this);
     }
 
     #region Setter
