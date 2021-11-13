@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 322475100}
   - component: {fileID: 322475102}
   m_Layer: 0
-  m_Name: homeless.png_0
+  m_Name: Homeless
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,7 +1256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322475099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.91, y: 1.98, z: 0}
+  m_LocalPosition: {x: 47, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1274,6 +1274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d0646275fc60c4499ba26ffcffc3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerPosition: {fileID: 1832236892}
+  Right: {fileID: -5197268214703973851, guid: 276fc9f58fbb9429bb12d5f9e7e833e0, type: 3}
+  Left: {fileID: -140560413892230166, guid: 276fc9f58fbb9429bb12d5f9e7e833e0, type: 3}
+  Forward: {fileID: 4464973075330256293, guid: 276fc9f58fbb9429bb12d5f9e7e833e0, type: 3}
+  None: {fileID: -6415075001800873667, guid: 276fc9f58fbb9429bb12d5f9e7e833e0, type: 3}
 --- !u!1 &333400050
 GameObject:
   m_ObjectHideFlags: 0

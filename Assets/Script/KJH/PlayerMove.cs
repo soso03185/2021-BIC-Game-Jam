@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     public float Speed = 10f;
 
+    public bool _isMove { get; set; } = true;
+
     Rigidbody2D _rigid;
     Animator _anim;
 
@@ -73,7 +75,7 @@ public class PlayerMove : MonoBehaviour
     void UpdateAnimation()
     {
         // Moving Animation
-        if (_state == CharacterState.Moving)
+        if (_state == CharacterState.Moving && _isMove)
         {
             switch (_dir)
             {
