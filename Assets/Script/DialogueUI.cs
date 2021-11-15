@@ -17,6 +17,7 @@ public class DialogueUI : MonoBehaviour
         textui.DOText(dialogue, 1.5f).OnComplete
             (() =>
                {
+                   Debug.Log("Rmx");
                    textui
                     .DOFade(0, 1.5f)
                     .SetDelay(1.5f);
