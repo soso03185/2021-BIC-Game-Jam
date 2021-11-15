@@ -16,7 +16,9 @@ public class Event : MonoBehaviour
             OnActivate.Invoke();
             this.isActivated = true;
 
+            if (gameObject.CompareTag("Event") == true)
             Stage.currentActivatedTriggers.Add(this.index);
+
             gameObject.SetActive(false);
         }
         

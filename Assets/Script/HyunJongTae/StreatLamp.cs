@@ -40,7 +40,7 @@ public class StreatLamp : MonoBehaviour
         int count = 0;
         myAudio.Play();
     
-        while (count < 13)
+        while (count < 7)
         {
             if (lightObj.activeSelf) lightObj.SetActive(false);
             else lightObj.SetActive(true);
@@ -57,7 +57,7 @@ public class StreatLamp : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         myAudio.Stop();
-        SoundManager.Instance.SetSFXVolume(1.0f);
+        //SoundManager.Instance.SetSFXVolume(1.0f);
         SoundManager.Instance.PlayVFX("Spark");
         lightObj.SetActive(false);
         shadow.SetActive(false);

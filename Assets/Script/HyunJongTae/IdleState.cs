@@ -12,7 +12,7 @@ public class IdleState : FSM
     {
         time = 0;
         change = false;
-        Debug.Log("Start Idle State");
+        //Debug.Log("Start Idle State");
         npc.SetWalkState(false);
     }
 
@@ -25,6 +25,6 @@ public class IdleState : FSM
 
     public override void Exit(NPC npc)
     {
-        Debug.Log("End Idle State");
+        //Debug.Log("End Idle State");
     }
 }

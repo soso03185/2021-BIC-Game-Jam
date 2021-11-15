@@ -20,8 +20,8 @@ public class HeartSound : MonoBehaviour
         if (!isPlaying) return;
 
         float distance = Vector2.Distance(transform.position, target.position);
-        myAudio.volume = 1 - (distance / 6) + 0.1f;
-        myAudio.pitch = 1.8f - (distance / 6);
+        myAudio.volume = 1 - (distance / 8) + 0.3f;
+        myAudio.pitch = 1.8f - (distance / 8);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

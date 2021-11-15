@@ -49,12 +49,6 @@ public class NPC : MonoBehaviour
     private void FixedUpdate()
     {        
         if (!stop) curState.Excute(this);
-        time += Time.deltaTime;
-        if (time > checkTime)
-        {
-            walkSpeed *= 1.2f;
-            time = 0;
-        }
     }
 
     public void Event(int value)
@@ -78,6 +72,22 @@ public class NPC : MonoBehaviour
         else myAudio.Stop();
     }
 
+    [SerializeField] private GameObject black;
+
+    public void Ending()
+    {
+        black.SetActive(true);
+        StartCoroutine(Routine());
+    }
+
+    private IEnumerator Routine()
+    {
+        yield return new WaitForSecondsRealtime(0.4f);
+        SoundManager.Instance.PlayVFX("Female screams 3");
+        yield return new WaitForSecondsRealtime(2.5f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+    }
+
     #region Setter
     public void ChangeState(FSM newState)
     {        
@@ -93,6 +103,11 @@ public class NPC : MonoBehaviour
         else ani.SetFloat("speed", 0);
     }
 
+    public void SetWalkSpeed(float value)
+    {
+        walkSpeed *= value;
+    }
+
     #endregion
 
     #region Getter
@@ -102,18 +117,9 @@ public class NPC : MonoBehaviour
 
     private void FootSound(int val)
     {
-        if (val == 0)
-        {
-            SoundManager.Instance.SetSFXVolume(0.2f);
+        SoundManager.Instance.SetSFXVolume(0.5f);
 
-            SoundManager.Instance.PlayVFX("Walk_right");
-        }
-        else if (val == 1)
-        {
-            SoundManager.Instance.SetSFXVolume(0.13f);
-
-            SoundManager.Instance.PlayVFX("Walk_left");
-        }
+        SoundManager.Instance.PlayVFX("Walk_left");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

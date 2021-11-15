@@ -9,7 +9,7 @@ public class Truck : MonoBehaviour
 
     [SerializeField] private bool start;
 
-    private GameObject black;
+    private GameObject black;    
 
 
     private void Awake()
@@ -22,11 +22,13 @@ public class Truck : MonoBehaviour
     private void Start()
     {
         black.SetActive(false);
-        if (start) Event();
+        
     }
 
-    private void Event()
+    public void Event(int val)
     {
+        if (val == 0) myColl.enabled = true;
+        else if (val == 1) myColl.enabled = false;
         StartCoroutine(Routine());
     }
 
@@ -64,5 +66,7 @@ public class Truck : MonoBehaviour
         SoundManager.Instance.PlayVFX("brake");
         yield return new WaitForSecondsRealtime(0.2f);
         SoundManager.Instance.PlayVFX("hit");
+        yield return new WaitForSecondsRealtime(0.8f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 }

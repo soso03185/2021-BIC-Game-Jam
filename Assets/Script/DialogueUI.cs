@@ -7,6 +7,7 @@ using DG.Tweening;
 public class DialogueUI : MonoBehaviour
 {
     public Text textui;
+    public bool isYoIL = false;
 
     public void ExecuteDialogue(string dialogue)
     {
@@ -21,6 +22,33 @@ public class DialogueUI : MonoBehaviour
                     .SetDelay(1.5f);
                }
             );
-    }    
+    }
+
+    private void OnEnable()
+    {
+        if (isYoIL)
+        {
+            switch (Stage.StageCount)
+            {
+                case 0:
+                    ExecuteDialogue("월요일");
+                    break;
+                case 1:
+                    ExecuteDialogue("화요일");
+                    break;
+                case 2:
+                    ExecuteDialogue("수요일");
+                    break;
+                case 3:
+                    ExecuteDialogue("목요일");
+                    break;
+                case 4:
+                    ExecuteDialogue("금요일");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
 }

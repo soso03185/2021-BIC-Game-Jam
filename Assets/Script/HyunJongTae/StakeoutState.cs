@@ -21,6 +21,6 @@ public class StakeoutState : FSM
 
     public override void Exit(NPC npc)
     {
-        npc.transform.position = npc.player.transform.position + new Vector3(-10.5f, 0);
+        npc.transform.position = npc.player.transform.position + new Vector3(-10.3f, 0);
     }
 }

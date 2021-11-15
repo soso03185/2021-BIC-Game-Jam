@@ -4,23 +4,31 @@ using UnityEngine;
 
 public class StudentState : FSM
 {
-    private float time;
-    private float checkTime = 3;
     private bool change;
     private bool stop;
+    private float wTime;
+    private float wCheckTime = 8;
 
-    private bool end;
+
+private bool end;
 
     public override void Enter(NPC npc)
     {
         change = false;
         stop = false;
-        Debug.Log("Start Student State ");
-        npc.SetWalkState(true);            
+        //Debug.Log("Start Student State ");
+        npc.SetWalkState(true);
+        npc.transform.position = npc.player.transform.position + new Vector3(-10.3f, 0);
     }
 
     public override void Excute(NPC npc)
-    {        
+    {
+        wTime += Time.deltaTime;
+        if (wTime > wCheckTime)
+        {
+            npc.SetWalkSpeed(1.06f);
+            wTime = 0;
+        }
         npc.transform.Translate(Vector2.right * Time.deltaTime * npc.GetWalkSpeed());
         if (end) return;
         if (npc.reach)
@@ -47,14 +55,14 @@ public class StudentState : FSM
             {
                 stop = false;
                 change = false;
-                Debug.Log("Failed");
+                //Debug.Log("Failed");
             }
         }             
     }
 
     public override void Exit(NPC npc)
     {
-        Debug.Log("End Student State");       
+        //Debug.Log("End Student State");       
     }
 
     private bool RandomStop(int percent)
