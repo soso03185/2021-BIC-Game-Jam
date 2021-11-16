@@ -17,7 +17,6 @@ public class DialogueUI : MonoBehaviour
         textui.DOText(dialogue, 1.5f).OnComplete
             (() =>
                {
-                   Debug.Log("Rmx");
                    textui
                     .DOFade(0, 1.5f)
                     .SetDelay(1.5f);
@@ -32,19 +31,19 @@ public class DialogueUI : MonoBehaviour
             switch (Stage.StageCount)
             {
                 case 0:
-                    ExecuteDialogue("???");
+                    ExecuteDialogue("월요일");
                     break;
                 case 1:
-                    ExecuteDialogue("???");
+                    ExecuteDialogue("화요일");
                     break;
                 case 2:
-                    ExecuteDialogue("???");
+                    ExecuteDialogue("수요일");
                     break;
                 case 3:
-                    ExecuteDialogue("???");
+                    ExecuteDialogue("목요일");
                     break;
                 case 4:
-                    ExecuteDialogue("???");
+                    ExecuteDialogue("금요일");
                     break;
                 default:
                     break;

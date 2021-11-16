@@ -139,9 +139,9 @@ public class PlayerMove : MonoBehaviour
         if (_isMove)
         {
             // Direction Input
-            if (Input.GetKey(KeyCode.A) && _isBack)
+            if (Input.GetAxisRaw("Horizontal") < 0 && _isBack)
                 Dir = MoveDir.Left;
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetAxisRaw("Horizontal") > 0)
                 Dir = MoveDir.Right;
             else
                 Dir = MoveDir.None;
@@ -150,8 +150,6 @@ public class PlayerMove : MonoBehaviour
 
     void Foot()
     {
-        //SoundManager.Instance.SetSFXVolume(0.2f);
-
         SoundManager.Instance.PlayVFX("Walk_right");
     }
 
