@@ -10,6 +10,7 @@ public class GameString : MonoBehaviour
     public float typingspeed = 0.05f;
     private RectTransform _recttransform;
     private AudioSource audiosource;
+    public int eventStringSize = 50, LastStringSize = 52;
 
 
     public void AddStageCount() { Stage.StageCount++; }
@@ -40,7 +41,6 @@ public class GameString : MonoBehaviour
 
         TextElement lasttext = Eventtext.GetLastText(Stage.StageCount);
         lasttext.transform.SetParent(transform);
-
         StartCoroutine(TypeCoroutine(firsttext, eventtexts, lasttext));
         
     }
@@ -48,6 +48,13 @@ public class GameString : MonoBehaviour
     private IEnumerator TypeCoroutine(TextElement first, List<TextElement> events, TextElement last)
     {
         audiosource.Play();
+
+        for (int i = 0; i < events.Count; i++)
+        {
+            first.text = string.Format("{0}\n<size={1}>{2}</size>", first.text, eventStringSize, events[i].text);
+        }
+
+        first.text = string.Format("{0}\n<size={1}>{2}</size>", first.text, LastStringSize, last.text);
 
         first.textUI.DOText(first.text, first.text.Length * typingspeed).
             OnComplete(() =>
@@ -59,38 +66,11 @@ public class GameString : MonoBehaviour
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(first.textUI.rectTransform);
 
-        yield return new WaitForSeconds(0.5f);
-
-        for (int i=0; i<events.Count;i++)
-        {
-            audiosource.Play();
-            events[i].textUI.DOText(events[i].text, events[i].text.Length * typingspeed).OnComplete(() =>
-            {
-                events[i].isTypeComplete = true;
-            });
-
-            yield return new WaitUntil(() => events[i].isTypeComplete == true);
-
-            LayoutRebuilder.ForceRebuildLayoutImmediate(events[i].textUI.rectTransform);
-        }
-
-        yield return new WaitForSeconds(0.5f);
-
-        audiosource.Play();
-        last.textUI.DOText(last.text, last.text.Length * typingspeed).OnComplete(() =>
-        {
-            last.isTypeComplete = true;
-        });
-
-        yield return new WaitUntil(() => last.isTypeComplete == true);
-
-        LayoutRebuilder.ForceRebuildLayoutImmediate(last.textUI.rectTransform);
-
-        yield return new WaitForSeconds(0.5f);
-
         audiosource.Stop();
-        Eventtext.ButtonPanel.SetParent(transform);
+        Eventtext.ButtonPanel.gameObject.SetActive(true);
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(_recttransform);
+
+
     }
 }
