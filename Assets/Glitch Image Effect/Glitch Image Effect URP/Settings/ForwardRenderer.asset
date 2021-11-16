@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Active: 1
   settings:
     renderPassEvent: 500
-    type: 2
+    type: 0
     blend: 0.183
-    frequency: 10
-    interference: 130
-    noise: 0.15
+    frequency: 4
+    interference: 80
+    noise: 0.2
     scanLine: 1
     colored: 0.25
-    intensityType3: 10
+    intensityType3: 9
     lines: 240
     scanSpeed: 2
     linesThreshold: 0.7
