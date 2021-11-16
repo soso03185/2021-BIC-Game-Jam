@@ -15,6 +15,7 @@ public class Stage : MonoBehaviour
     private void Awake()
     {
         //Connect Eventtriger datas to current event components;
+        if(StageCount < 4)
         InitializeEvents();
         currentActivatedTriggers = new List<int>();
     }
