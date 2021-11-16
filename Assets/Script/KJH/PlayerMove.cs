@@ -159,8 +159,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.tag == "Event") 
         {
-            Debug.Log("player Stop");
-            _co = StartCoroutine("_coPlayerStop");
+            Event ev = collision.GetComponent<Event>();
+            delayEvent = ev.delay;
+
+            if(ev != null)
+            {
+                Debug.Log("player Stop");
+                _co = StartCoroutine("_coPlayerStop");
+            }
         }
     }
 

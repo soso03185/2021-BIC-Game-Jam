@@ -524,6 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 2
   index: 2
   OnActivate:
     m_PersistentCalls:
@@ -834,6 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   index: 9
   OnActivate:
     m_PersistentCalls:
@@ -2352,6 +2354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 4
   index: 4
   OnActivate:
     m_PersistentCalls:
@@ -5303,6 +5306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 3
   index: 1
   OnActivate:
     m_PersistentCalls:
@@ -5809,7 +5813,7 @@ GameObject:
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1298365586
 Transform:
   m_ObjectHideFlags: 0
@@ -5862,6 +5866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 5
   index: 3
   OnActivate:
     m_PersistentCalls:
@@ -5922,6 +5927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   index: 10
   OnActivate:
     m_PersistentCalls:
@@ -6243,6 +6249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   index: 8
   OnActivate:
     m_PersistentCalls:
@@ -7665,6 +7672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 4
   index: 5
   OnActivate:
     m_PersistentCalls:
@@ -8596,6 +8604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 3
   index: 0
   OnActivate:
     m_PersistentCalls:
