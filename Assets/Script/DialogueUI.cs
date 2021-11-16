@@ -32,19 +32,19 @@ public class DialogueUI : MonoBehaviour
             switch (Stage.StageCount)
             {
                 case 0:
-                    ExecuteDialogue("월요일");
+                    ExecuteDialogue("???");
                     break;
                 case 1:
-                    ExecuteDialogue("화요일");
+                    ExecuteDialogue("???");
                     break;
                 case 2:
-                    ExecuteDialogue("수요일");
+                    ExecuteDialogue("???");
                     break;
                 case 3:
-                    ExecuteDialogue("목요일");
+                    ExecuteDialogue("???");
                     break;
                 case 4:
-                    ExecuteDialogue("금요일");
+                    ExecuteDialogue("???");
                     break;
                 default:
                     break;
