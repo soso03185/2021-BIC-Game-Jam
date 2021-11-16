@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class Event : MonoBehaviour
 {
     public bool isActivated { get; set; } = false;
-    public float delay { get; set; } = 0f;
+    public float delay;
 
     public int index = 99;
 
