@@ -1822,6 +1822,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 752285371}
     m_Modifications:
+    - target: {fileID: 2010447998738051514, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
+      propertyPath: d
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010447998738051514, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 1218173853}
     - target: {fileID: 2010447998738051515, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
       propertyPath: m_Name
       value: Truck
@@ -1909,6 +1917,10 @@ PrefabInstance:
     - target: {fileID: 2010447998738051527, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
       value: 0.98857117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010447998738051527, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2010447998738051527, guid: 9d1c0dc3ef3f9504286d7612caa0a79f, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope

@@ -159,6 +159,7 @@ public class PlayerMove : MonoBehaviour
         {
             Event ev = collision.GetComponent<Event>();
             delayEvent = ev.delay;
+            if (delayEvent == 0) return;
 
             if(ev != null)
             {

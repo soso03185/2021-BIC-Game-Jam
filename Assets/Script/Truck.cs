@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Truck : MonoBehaviour
 {
+    public Transform playerPosition;
+    float tVolume = 1;
+    [SerializeField] float distance = 0.1f;
+    
     private Collider2D myColl;
     [SerializeField] private float speed;
 
@@ -23,6 +27,21 @@ public class Truck : MonoBehaviour
     {
         black.SetActive(false);
         
+    }
+    private void Update()
+    {
+        distance =this.transform.position.x - playerPosition.position.x;
+
+        if (distance == 0) return;
+
+        else
+        {
+            if (distance < 20f && distance > -70f) tVolume = 1 / Mathf.Abs(distance);
+            else tVolume = 0f;
+        }
+
+        this.GetComponent<AudioSource>().volume = tVolume;
+
     }
 
     public void Event(int val)
