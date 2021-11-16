@@ -60,13 +60,14 @@ public class GameString : MonoBehaviour
             OnComplete(() =>
             {
                 first.isTypeComplete = true;
+                audiosource.Stop();
             });
 
         yield return new WaitUntil(() => first.isTypeComplete == true);
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(first.textUI.rectTransform);
 
-        audiosource.Stop();
+        
         Eventtext.ButtonPanel.gameObject.SetActive(true);
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(_recttransform);
