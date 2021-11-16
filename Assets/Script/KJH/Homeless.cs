@@ -47,6 +47,11 @@ public class Homeless : MonoBehaviour
         _co = StartCoroutine("eventURP");
     }
 
+    public void EventCameara()
+    {
+        _co = StartCoroutine("eventURP");
+    }
+
     IEnumerator eventHomeless()
     {
         // Angry Homeless !!
