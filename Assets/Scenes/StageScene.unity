@@ -540,6 +540,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 600001312}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+        m_MethodName: set__isBack
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &89608855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d0646275fc60c4499ba26ffcffc3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeCam: {fileID: 932720686}
+  volumeCam: {fileID: 932720688}
   _shoutText: {fileID: 793784758}
   _effectShout: {fileID: 1076243865}
   _playerPosition: {fileID: 1218173853}
@@ -2861,6 +2873,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 50
   m_TargetDisplay: 0
+--- !u!114 &600001312 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 663968110371912439, guid: 9ec4da7ddc6016d4280c02e0cd50693d, type: 3}
+  m_PrefabInstance: {fileID: 1218173852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49047130e62ca474dbde4f80b15b24e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &645499564
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,6 +5631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 663968110371912439, guid: 9ec4da7ddc6016d4280c02e0cd50693d, type: 3}
+      propertyPath: delayEvent
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4477241269591297399, guid: 9ec4da7ddc6016d4280c02e0cd50693d, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -5782,7 +5809,7 @@ GameObject:
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1298365586
 Transform:
   m_ObjectHideFlags: 0
@@ -5791,7 +5818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298365585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.13, y: 2.87, z: 0}
+  m_LocalPosition: {x: 45.92, y: 2.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1629963132}

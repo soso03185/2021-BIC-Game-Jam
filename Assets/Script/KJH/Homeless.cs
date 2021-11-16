@@ -31,9 +31,9 @@ public class Homeless : MonoBehaviour
 
         float playerPo = transform.position.x - _playerPosition.position.x;
 
-        if (playerPo > 0 && playerPo < 7)
+        if (playerPo > 0 && playerPo < 6)
             _spriteRenderer.sprite = Left;
-        else if (playerPo <= 0 && playerPo > -7)
+        else if (playerPo <= 0 && playerPo > -6.5f)
             _spriteRenderer.sprite = Right;
         else
         {
@@ -44,6 +44,7 @@ public class Homeless : MonoBehaviour
     public void AngryHomeless()
     {
         _co = StartCoroutine("eventHomeless");
+        _co = StartCoroutine("eventURP");
     }
 
     IEnumerator eventHomeless()
@@ -52,16 +53,23 @@ public class Homeless : MonoBehaviour
         _isAngry = true;
         _effectShout.SetActive(true);
         _spriteRenderer.sprite = Forward;
-        _shoutText.fontSize = 300;
+        _shoutText.fontSize = 800;
+        SoundManager.Instance.SetSFXVolume(30.0f);
         SoundManager.Instance.PlayVFX("Homeless");
         yield return new WaitForSeconds(0.1f);
 
-        volumeCam.SetRenderer(1);
         _effectShout.GetComponent<SpriteRenderer>().DOFade(0, 10.0f);
-        _shoutText.fontSize = 100;
+        _shoutText.fontSize = 400;
         yield return new WaitForSeconds(5f);
 
+        _co = null;
+    }
+    IEnumerator eventURP()
+    {
+        volumeCam.SetRenderer(1);
+        yield return new WaitForSeconds(5f);
         volumeCam.SetRenderer(0);
         _co = null;
+
     }
 }

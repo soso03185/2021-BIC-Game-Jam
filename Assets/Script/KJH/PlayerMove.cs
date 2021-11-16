@@ -5,12 +5,14 @@ using static Define;
 
 public class PlayerMove : MonoBehaviour
 {
+    public bool _isBack { get; set; } = true;
     public float Speed { get; set; } = 1f;
-
-    public bool _isMove { get; set; } = true;
+    public bool _isMove = true;
+    public float delayEvent = 4f;
 
     Rigidbody2D _rigid;
     Animator _anim;
+    Coroutine _co = null;
 
     public CharacterState _state = CharacterState.Idle;
     MoveDir _dir = MoveDir.None;
@@ -67,15 +69,15 @@ public class PlayerMove : MonoBehaviour
                 break;
 
             case CharacterState.Run:
-                GetInput();
-                UpdateAnimation();
+                //GetInput();
+                //UpdateAnimation();
                 break;
         }
     }
     void UpdateAnimation()
     {
         // Moving Animation
-        if (_state == CharacterState.Moving && _isMove)
+        if (_state == CharacterState.Moving)
         {
             switch (_dir)
             {
@@ -100,27 +102,27 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Run Animation
-        else if (_state == CharacterState.Run)
-        {
-            switch (_dir)
-            {
-                case MoveDir.Left:
-                    _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
-                    _anim.Play("Player_Run");
-                    break;
+        //else if (_state == CharacterState.Run)
+        //{
+        //    switch (_dir)
+        //    {
+        //        case MoveDir.Left:
+        //            _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
+        //            _anim.Play("Player_Run");
+        //            break;
 
-                case MoveDir.Right:
-                    _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
+        //        case MoveDir.Right:
+        //            _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
 
-                     _anim.Play("Player_Run");
-                    break;
+        //            _anim.Play("Player_Run");
+        //            break;
 
-                case MoveDir.None:
-                    _rigid.velocity = new Vector2(0, _rigid.velocity.y);
-                    _anim.Play("Player_Idle");
-                    break;
-            }
-        }
+        //        case MoveDir.None:
+        //            _rigid.velocity = new Vector2(0, _rigid.velocity.y);
+        //            _anim.Play("Player_Idle");
+        //            break;
+        //    }
+        //}
     }
 
     void UpdateIdle()
@@ -134,13 +136,16 @@ public class PlayerMove : MonoBehaviour
 
     void GetInput()
     {
-        // Direction Input
-        if (Input.GetKey(KeyCode.A))
-            Dir = MoveDir.Left;
-        else if (Input.GetKey(KeyCode.D))
-            Dir = MoveDir.Right;
-        else
-            Dir = MoveDir.None;
+        if (_isMove)
+        {
+            // Direction Input
+            if (Input.GetKey(KeyCode.A) && _isBack)
+                Dir = MoveDir.Left;
+            else if (Input.GetKey(KeyCode.D))
+                Dir = MoveDir.Right;
+            else
+                Dir = MoveDir.None;
+        }
     }
 
     void Foot()
@@ -150,4 +155,22 @@ public class PlayerMove : MonoBehaviour
         SoundManager.Instance.PlayVFX("Walk_right");
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Event") 
+        {
+            Debug.Log("player Stop");
+            _co = StartCoroutine("_coPlayerStop");
+        }
+    }
+
+    IEnumerator _coPlayerStop()
+    {
+        _isMove = false;
+        Dir = MoveDir.None;
+        yield return new WaitForSeconds(delayEvent);
+
+        _isMove = true;
+        _co = null;
+    }
 }
