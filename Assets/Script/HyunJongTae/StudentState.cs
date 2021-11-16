@@ -43,7 +43,7 @@ private bool end;
         }
         else
         {
-            if (!stop && change) stop = true;
+            if (!stop && change) stop = false;
         }
         if (stop)
         {
