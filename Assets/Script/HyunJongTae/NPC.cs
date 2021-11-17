@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour
     private Animator ani;
     public PlayerMove player { get; private set; }
     private AudioSource myAudio;
+    public AudioSource Heartbeataudio;
 
     [SerializeField] private float walkSpeed;
     [SerializeField] private int eventValue;
@@ -76,6 +77,7 @@ public class NPC : MonoBehaviour
 
     public void Ending()
     {
+        Heartbeataudio.gameObject.SetActive(false);
         black.SetActive(true);
         StartCoroutine(Routine());
     }
