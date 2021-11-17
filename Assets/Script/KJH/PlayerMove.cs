@@ -6,7 +6,7 @@ using static Define;
 public class PlayerMove : MonoBehaviour
 {
     public bool _isBack { get; set; } = true;
-    public float Speed { get; set; } = 2f;
+    public float Speed { get; set; } = 1.5f;
     public bool _isMove = true;
     public float delayEvent = 4f;
 
