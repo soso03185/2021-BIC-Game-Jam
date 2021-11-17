@@ -2751,7 +2751,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uBCC4\uC77C\uC774\uB124 \uC624\uB298..."
+          m_StringArgument: "\uBCC4\uC77C\uC774\uB124 \uC624\uB298.."
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &750815835
@@ -3918,7 +3918,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uC624\uB298 \uC5C4\uCCAD \uB2A6\uAC8C \uB05D\uB098\uB124.."
+          m_StringArgument: "\uC624\uB298 \uC5C4\uCCAD \uB2A6\uAC8C \uB05D\uB098\uB124"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &961451647
@@ -6163,7 +6163,7 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: "\uC774 \uAE38\uC740 \uC774\uC2DC\uAC04\uC5D0 \uCC98\uC74C
-            \uC640\uBCF4\uB294\uB370..."
+            \uC640\uBCF4\uB294\uB370"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1583686200
@@ -6250,7 +6250,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uAE5C\uC9DD\uC774\uC57C.."
+          m_StringArgument: "\uAE5C\uC9DD\uC774\uC57C"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1592374958
@@ -7067,7 +7067,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uACE0\uC591\uC774\uC600\uAD6C\uB098.."
+          m_StringArgument: "\uACE0\uC591\uC774\uC600\uAD6C\uB098"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1875332935
@@ -7573,7 +7573,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uBE68\uB9AC \uC9D1\uAC00\uC11C \uC53B\uACE0 \uC790\uC57C\uACA0\uB2E4."
+          m_StringArgument: "\uBE68\uB9AC \uC9D1\uAC00\uC11C \uC53B\uACE0 \uC790\uC57C\uACA0\uB2E4"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2100734296
@@ -7747,7 +7747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be4999d1dfc843eda9337defbb285ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3.5
+  delay: 2
   index: 0
   OnActivate:
     m_PersistentCalls:

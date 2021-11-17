@@ -87,7 +87,7 @@ public class NPC : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.4f);
         SoundManager.Instance.PlayVFX("Female screams 3");
         yield return new WaitForSecondsRealtime(4.0f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
 
     #region Setter
