@@ -33,11 +33,4 @@ public class EventEditor : Editor
             EditorGUILayout.HelpBox("인덱스가 중복됩니다.", MessageType.Warning);
 
     }
-
-    public void Reset()
-    {
-        Event targetevent = (Event)target;
-        targetevent.index = targetevent.transform.GetSiblingIndex();
-        targetevent.gameObject.name = string.Format("Event #{0}", targetevent.index);
-    }
 }

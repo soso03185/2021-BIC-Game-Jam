@@ -13,9 +13,15 @@ public class StageEnd : MonoBehaviour
         SceneManager.LoadScene(scenename);
     }
 
+
+    public void GotoNextStage()
+    {
+        Stage.StageCount++;
+        SceneManager.LoadScene(Stage.StageCount + 1);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        stage.UpdateEventTriggers();
         StartCoroutine(Routine());
     }
 
@@ -23,6 +29,6 @@ public class StageEnd : MonoBehaviour
     {
         fade.SetActive(true);
         yield return new WaitForSecondsRealtime(2f);
-        GotoStage(scenename);
+        SceneManager.LoadScene(scenename);
     }
 }

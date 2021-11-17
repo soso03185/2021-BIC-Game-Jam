@@ -86,6 +86,6 @@ public class Truck : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.2f);
         SoundManager.Instance.PlayVFX("hit");
         yield return new WaitForSecondsRealtime(0.8f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
 }
