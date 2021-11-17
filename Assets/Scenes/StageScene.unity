@@ -1512,6 +1512,10 @@ PrefabInstance:
       propertyPath: walkSpeed
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6749583269557805641, guid: aecdcbad5dc982943a2ab259cf9f277f, type: 3}
+      propertyPath: Heartbeataudio
+      value: 
+      objectReference: {fileID: 1752817620}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecdcbad5dc982943a2ab259cf9f277f, type: 3}
 --- !u!4 &320363552 stripped
@@ -7822,6 +7826,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1752817620 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4477241269591297399, guid: 9ec4da7ddc6016d4280c02e0cd50693d, type: 3}
+  m_PrefabInstance: {fileID: 1218173852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1790751123
 GameObject:
   m_ObjectHideFlags: 0
