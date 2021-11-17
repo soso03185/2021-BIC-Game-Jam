@@ -29,7 +29,7 @@ public class PlayerSick : MonoBehaviour
         if(_isSick)
         vignetteFloat += plusDark * Time.deltaTime;
 
-        if(vignetteFloat > 0.6f)
+        if(vignetteFloat > 0.5f)
         {
             volumeCam.SetRenderer(1);
 
