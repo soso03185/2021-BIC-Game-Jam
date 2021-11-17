@@ -6,10 +6,11 @@ public class EndScene : MonoBehaviour
 {
     [SerializeField] private GameObject eventObj;
 
-    private void Awake()
+    private void OnEnable()
     {
-        if (Stage.StageCount == 4)
+        if (Stage.StageCount >= 4)
         {
+            Debug.Log("last event activated.");
             Ending();
         }
     }

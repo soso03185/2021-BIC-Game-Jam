@@ -22,7 +22,7 @@ public class CriminalState : FSM
         wTime += Time.deltaTime;
         if (wTime > wCheckTime)
         {
-            npc.SetWalkSpeed(1.06f);
+            npc.SetWalkSpeed(2f);
             wTime = 0;
         }
     }
