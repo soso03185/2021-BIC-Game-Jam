@@ -9,4 +9,8 @@ public class Stage : MonoBehaviour
     public static bool[] eventtriggers = new bool[TotalEventsAmount];
     public static List<int> currentActivatedTriggers = new List<int>();
     
+    private void Awake()
+    {
+        currentActivatedTriggers = new List<int>();
+    }
 }
