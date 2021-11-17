@@ -82,8 +82,8 @@ public class PlayerMove : MonoBehaviour
             switch (_dir)
             {
                 case MoveDir.Left:
-                    _rigid.velocity = new Vector2(-Speed, _rigid.velocity.y);
-                    _anim.SetFloat("Reverse", -1.0f);
+                    _rigid.velocity = new Vector2(Speed, _rigid.velocity.y);
+                    _anim.SetFloat("Reverse", 1.0f);
                     _anim.Play("Player_Walking");
                     break;
 

@@ -6,13 +6,13 @@ using UnityEngine.Rendering;
 public class PlayerSick : MonoBehaviour
 {
     [SerializeField] UnityEngine.Rendering.Universal.UniversalAdditionalCameraData volumeCam;
-    [SerializeField] float vignetteFloat = 0.33f;
-    public bool _isSick= false;
+    [SerializeField] float vignetteFloat = 0.4f;
+    public bool _isSick { get; set; } = false;
     public float plusDark = 0.02f;
 
     private void Start()
     {
-        vignetteFloat = 0.33f;
+        vignetteFloat = 0.4f;
         volumeCam.SetRenderer(0);
 
     }
@@ -34,7 +34,7 @@ public class PlayerSick : MonoBehaviour
             volumeCam.SetRenderer(1);
 
             if (vignetteFloat > 0.8f)
-                plusDark = 0.06f;
+                plusDark = 0.6f;
         }
     }
 }
