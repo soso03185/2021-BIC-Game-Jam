@@ -43,7 +43,7 @@ public class DialogueUI : MonoBehaviour
                     ExecuteDialogue("목요일");
                     break;
                 case 4:
-                    ExecuteDialogue("금요일");
+                    ExecuteDialogue("금요일.");
                     break;
                 default:
                     break;
