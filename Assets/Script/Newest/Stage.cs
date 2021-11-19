@@ -13,4 +13,9 @@ public class Stage : MonoBehaviour
     {
         currentActivatedTriggers = new List<int>();
     }
+
+    private void OnEnable()
+    {
+        Cursor.visible = false;   
+    }
 }

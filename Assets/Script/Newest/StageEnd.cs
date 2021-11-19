@@ -13,6 +13,13 @@ public class StageEnd : MonoBehaviour
         SceneManager.LoadScene(scenename);
     }
 
+    public void RestartGame()
+    {
+        Stage.StageCount = 0;
+        Stage.eventtriggers = new bool[Stage.TotalEventsAmount];
+        Stage.currentActivatedTriggers = new List<int>();
+        SceneManager.LoadScene(0);
+    }
 
     public void GotoNextStage()
     {
