@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -10,7 +11,7 @@ public class SoundManager : MonoBehaviour
     public const string SFX_PATH = "Sound/SFX/";
 
     private AudioSource bgmSource;
-    private AudioSource sfxSource;
+    public AudioSource sfxSource;
 
     private Dictionary<string, AudioClip> bgmClips;
     private Dictionary<string, AudioClip> sfxClips;
@@ -78,8 +79,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlayVFX(string key)
     {
-        sfxSource.PlayOneShot(sfxClips[key]);
+        sfxSource.clip = sfxClips[key];
+        sfxSource.Play();
     }
+
     public void SetBGMVolume(float value)
     {
         bgmVolume = value;
@@ -96,4 +99,16 @@ public class SoundManager : MonoBehaviour
         bgmSource.volume = masterVolume * bgmVolume;
         sfxSource.volume = masterVolume * sfxVolume;
     }
+    public void FadeOutSFX(float time)
+    {
+        sfxSource.DOFade(0, time).OnComplete
+            (() =>
+            {
+                sfxSource.clip = null;
+                sfxSource.Stop();
+                sfxSource.volume = 1;
+            });
+    }
+
+
 }

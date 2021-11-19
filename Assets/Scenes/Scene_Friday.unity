@@ -1299,6 +1299,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6749583269557805641, guid: aecdcbad5dc982943a2ab259cf9f277f, type: 3}
+      propertyPath: BGM
+      value: 
+      objectReference: {fileID: 99778425}
+    - target: {fileID: 6749583269557805641, guid: aecdcbad5dc982943a2ab259cf9f277f, type: 3}
       propertyPath: black
       value: 
       objectReference: {fileID: 1466746582}
@@ -3993,7 +3997,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uC624\uB298 \uC65C\uC774\uB807\uAC8C \uC870\uC6A9\uD558\uC9C0?"
+          m_StringArgument: "\uC624\uB298\uC740 \uBB54\uAC00 \uB354 \uC870\uC6A9\uD55C\uAC70
+            \uAC19\uB124.."
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &961451647
@@ -4179,7 +4184,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uADF8\uB0E5 \uBE68\uB9AC \uC9C0\uB098\uAC00\uC168\uC73C\uBA74
+          m_StringArgument: "\uADF8\uB0E5 \uC800\uBC88\uCC98\uB7FC \uBE68\uB9AC \uC9C0\uB098\uAC00\uC168\uC73C\uBA74
             \uC88B\uACA0\uB2E4.."
           m_BoolArgument: 0
         m_CallState: 2
@@ -6881,7 +6886,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uD5C9..\uBC1C\uC18C\uB9AC\uAC00 \uB4E4\uB824"
+          m_StringArgument: "\uB610 \uBC1C\uC18C\uB9AC.."
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1804771523
@@ -7551,7 +7556,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: "\uC9D1\uC5D0 \uBE68\uB9AC \uAC00\uACE0\uC2F6\uC5B4"
+          m_StringArgument: "\uC9D1\uC5D0 \uBE68\uB9AC \uAC00\uC57C\uACA0\uC5B4.."
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2100734296

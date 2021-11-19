@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class NPC : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NPC : MonoBehaviour
     public PlayerMove player { get; private set; }
     private AudioSource myAudio;
     public AudioSource Heartbeataudio;
+    public AudioSource BGM;
 
     [SerializeField] private float walkSpeed;
     [SerializeField] private int eventValue;
@@ -67,6 +69,18 @@ public class NPC : MonoBehaviour
         SoundManager.Instance.PlayBGM("Ambience_Horror_Classic_03");
     }
 
+    public void FadeoutWalk(float time)
+    {
+        SoundManager.Instance.sfxSource.DOFade(0, time).OnComplete
+            (
+                () =>
+                    {
+                        SoundManager.Instance.sfxSource.volume = 1;
+                        gameObject.SetActive(false);
+                    }
+            );
+    }
+
     public void SetAudio(bool value)
     {
         if (value) myAudio.Play();
@@ -79,16 +93,10 @@ public class NPC : MonoBehaviour
     {
         Heartbeataudio.gameObject.SetActive(false);
         black.SetActive(true);
-        StartCoroutine(Routine());
-    }
-
-    private IEnumerator Routine()
-    {
-        yield return new WaitForSecondsRealtime(0.4f);
-        SoundManager.Instance.PlayVFX("Female screams 3");
-        yield return new WaitForSecondsRealtime(4.0f);
+        SoundManager.Instance.StopBGM();
         UnityEngine.SceneManagement.SceneManager.LoadScene(7);
     }
+
 
     #region Setter
     public void ChangeState(FSM newState)
@@ -119,8 +127,6 @@ public class NPC : MonoBehaviour
 
     private void FootSound(int val)
     {
-        SoundManager.Instance.SetSFXVolume(0.5f);
-
         SoundManager.Instance.PlayVFX("Walk_left");
     }
 

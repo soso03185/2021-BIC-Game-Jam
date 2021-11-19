@@ -1008,13 +1008,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1742402742}
-  m_RootOrder: 2
+  m_Father: {fileID: 1351750839}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1084.9999, y: -429.7402}
-  m_SizeDelta: {x: 1670, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885655236
 MonoBehaviour:
@@ -1038,7 +1038,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c362bae63be7dae48aad31be8fa21dbc, type: 3}
-    m_FontSize: 60
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1457,7 +1457,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 885655235}
   m_Father: {fileID: 854313859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1479,13 +1480,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 300
+    m_Left: 0
     m_Right: 0
-    m_Top: 230
+    m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
-  m_Spacing: 15
-  m_ChildForceExpandWidth: 1
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
@@ -1509,7 +1510,7 @@ MonoBehaviour:
   - "<size=55>9*.08.13.</size> \uD654\uC694\uC77C"
   - "<size=55>9*.08.14.</size> \uC218\uC694\uC77C"
   - "<size=55>9*.08.15.</size> \uBAA9\uC694\uC77C"
-  - "<size=55>9*.08.16.</size> \uAE08..\uC694\uC77C"
+  - "<size=55>9*.08.16.</size> \uC5E5? \uAE08..\uC694\uC77C?"
   EventStrings:
   - "\uC5B4\uB5A4 \uC9D1 \uC55E\uC744 \uC9C0\uB098\uAC00\uB294\uB370 \uB2F4\uB108\uBA38\uB85C
     \uAC1C\uAC00 \uB9C8\uAD6C \uC9D6\uC5C8\uB2E4.\r\n\uC65C \uADF8\uB807\uAC8C \uC9D6\uC5B4\uB304\uAC78\uAE4C?"
@@ -1530,11 +1531,11 @@ MonoBehaviour:
   - "\uB9C8\uD2B8 \uC55E\uC5D0 \uC788\uB294 \uB178\uC219\uC790 \uC544\uC800\uC528\uAC00
     \uB098\uC5D0\uAC8C \uC695\uB3C4 \uD558\uACE0 \uD070\uC18C\uB9AC\uB3C4 \uCCE4\uB2E4.\r\n\uC220\uC5D0
     \uCDE8\uD588\uC73C\uBA74 \uC9D1\uC5D0 \uBE68\uB9AC \uAC00\uC9C0..."
-  - "\uC624\uB298\uC740 \uBAB8\uC774 \uB108\uBB34 \uC544\uD30C\uC11C \uC2DC\uC57C\uAC00
-    \uD750\uB824\uC9C8 \uC815\uB3C4\uC600\uB2E4. \uC694\uC998 \uC2A4\uD2B8\uB808\uC2A4\uB97C
-    \uB9CE\uC774 \uBC1B\uC544\uC11C \uADF8\uB7F0\uAC00..? \uB3C4\uC6C0\uC744 \uAD6C\uD558\uACE0
-    \uC2F6\uC5C8\uC9C0\uB9CC, \uC8FC\uBCC0\uC5D0 \uC544\uBB34\uB3C4 \uC5C6\uC5B4\uC11C
-    \uC8FD\uC744 \uBED4\uD588\uB2E4."
+  - "\uBAB8\uC774 \uB108\uBB34 \uC544\uD30C\uC11C \uC2DC\uC57C\uAC00 \uD750\uB824\uC9C8
+    \uC815\uB3C4\uC600\uB2E4. \uC2A4\uD2B8\uB808\uC2A4\uB97C \uB9CE\uC774 \uBC1B\uC544\uC11C
+    \uADF8\uB7F0\uAC00..?\n\uB3C4\uC6C0\uC744 \uAD6C\uD558\uB824\uACE0 \uD588\uC9C0\uB9CC,
+    \uC8FC\uBCC0\uC5D0 \uC544\uBB34\uB3C4 \uC5C6\uC5B4\uC11C \uB3C4\uC6C0\uBC1B\uAE30\uB3C4
+    \uD798\uB4E4\uC5C8\uB2E4."
   StageLastStrings:
   - "\uC774\uBC88\uC8FC\uBD80\uD130 \uD559\uAD50\uC5D0\uC11C \uC57C\uC790\uB97C \uC2DC\uC791\uD55C\uB2E4\uACE0
     \uD55C\uB2E4. \r\uC9C4\uC9DC \uADC0\uCC2E\uB124..\n\uAC8C\uB2E4\uAC00 \uB2A6\uC740
@@ -1546,10 +1547,7 @@ MonoBehaviour:
     \uAE38\uC5D0 \uC790\uAFB8 \r\uB204\uAC00 \uB530\uB77C\uC624\uB294 \uAE30\uBD84\uC774
     \uB4E4\uC5C8\uB2E4.\n\uC544\uBB34\uB3C4 \uC5C6\uC5C8\uC9C0\uB9CC \uBD84\uBA85
     \uB204\uAC00 \uB0A0 \uC9C0\uCF1C\uBCF4\uB294 \uAE30\uBD84\r\uC774\uC5C8\uB2E4."
-  - "\uD56D\uC0C1 \uB4A4\uC5D0\uC11C \uB4E4\uB9AC\uB358 \uBC1C\uC18C\uB9AC\uAC00
-    \uC774\uC81C\uB294 \r\uB0B4\uC606\uC5D0\uC11C\uB3C4 \uB4E4\uB9AC\uB294 \uAC70
-    \uAC19\uC740 \uAE30\uBD84\uC774\uB2E4.\r\n\uBBF8\uCE60\uAC70\uAC19\uC544.. \uC774\uC81C
-    \uC800\uB141\uC5D0\uB294 \r\uB3CC\uC544\uB2E4\uB2C8\uACE0 \uC2F6\uC9C0 \uC54A\uC544..\r\n\uC9C0\uAE08\uB3C4
+  - "\uC774\uC81C \uC5B4\uB450\uC6B4 \uC774 \uAE38\uB3C4 \uC9C0\uAE0B\uC9C0\uAE0B\uD574....\r\n\uC9C0\uAE08\uB3C4
     \uB204\uAC00 \uB0A0 \uC9C0\uCF1C\uBCF4\uB294 \uAC70 \uAC19\uC544.."
   - "\uC774 \uBB38\uC7A5\uC744 \uBCF4\uACE0\uC788\uC73C\uBA74 \uBC84\uADF8\uAC00
     \uD130\uC84C\uB2E4\uB294 \uC18C\uB9AC\uACA0\uAD70..\n<size=90>\uC544\uC774 \uC2E0\uB098!!!!!!!!!!!!!!!!!!!!</size>"
@@ -1567,8 +1565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eventtext: {fileID: 1742402740}
   typingspeed: 0.03
-  eventStringSize: 45
-  LastStringSize: 45
+  eventStringSize: 44
+  LastStringSize: 44
 --- !u!114 &1351750843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,7 +1872,6 @@ RectTransform:
   m_Children:
   - {fileID: 1453357840}
   - {fileID: 369396611}
-  - {fileID: 885655235}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

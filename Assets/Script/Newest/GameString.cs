@@ -25,7 +25,7 @@ public class GameString : MonoBehaviour
         _recttransform = GetComponent<RectTransform>();
 
         TextElement firsttext = Eventtext.GetFirstText(Stage.StageCount);
-        firsttext.transform.SetParent(transform);
+        //firsttext.transform.SetParent(transform);
 
         List<TextElement> eventtexts = new List<TextElement>();
         if (Stage.currentActivatedTriggers != null)
@@ -34,13 +34,13 @@ public class GameString : MonoBehaviour
             {
                 eventtexts.Add(new TextElement());
                 eventtexts[i] = Eventtext.GetEventText(Stage.currentActivatedTriggers[i]);
-                eventtexts[i].transform.SetParent(transform);
+                //eventtexts[i].transform.SetParent(transform);
                 eventtexts[i].gameObject.SetActive(true);
             }
         }
 
         TextElement lasttext = Eventtext.GetLastText(Stage.StageCount);
-        lasttext.transform.SetParent(transform);
+        //lasttext.transform.SetParent(transform);
         StartCoroutine(TypeCoroutine(firsttext, eventtexts, lasttext));
         
     }
@@ -56,22 +56,21 @@ public class GameString : MonoBehaviour
 
         first.text = string.Format("{0}\n<size={1}>{2}</size>", first.text, LastStringSize, last.text);
 
-        first.textUI.DOText(first.text, first.text.Length * typingspeed).
-            OnComplete(() =>
+        first.textUI.DOFade(0, 0);
+
+        first.textUI.text = first.text;
+
+        first.textUI.DOFade(1, 2f)
+            .SetDelay(1.0f)
+            .OnComplete(() =>
             {
                 first.isTypeComplete = true;
                 audiosource.Stop();
             });
 
         yield return new WaitUntil(() => first.isTypeComplete == true);
-
-        LayoutRebuilder.ForceRebuildLayoutImmediate(first.textUI.rectTransform);
-
         
         Eventtext.ButtonPanel.gameObject.SetActive(true);
-
-        LayoutRebuilder.ForceRebuildLayoutImmediate(_recttransform);
-
 
     }
 }

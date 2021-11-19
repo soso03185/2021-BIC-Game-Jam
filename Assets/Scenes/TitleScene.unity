@@ -404,7 +404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 56.20999}
+  m_AnchoredPosition: {x: 0, y: 109.02}
   m_SizeDelta: {x: 720.065, y: 52.807983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244025712
@@ -440,8 +440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Copyright All rights to \uBB34\uC11C\uC6B4\uAC8C \uB531 \uC88B\uC544 2021
-    - "
+  m_Text: "Made by \"\uBB34\uC11C\uC6B4\uAC8C \uB531 \uC88B\uC544\""
 --- !u!222 &244025713
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -629,7 +628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 349}
+  m_AnchoredPosition: {x: 0, y: 342}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &510147825
@@ -1027,9 +1026,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89713af5e354d654c93687c5e8f21cb4, type: 3}
+    m_Font: {fileID: 12800000, guid: bb996263af34dde42bae017afe242403, type: 3}
     m_FontSize: 40
-    m_FontStyle: 3
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 80
@@ -2359,8 +2358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 872, y: 30}
-  m_SizeDelta: {x: 120.438, y: 52.613}
+  m_AnchoredPosition: {x: 745, y: 82.614}
+  m_SizeDelta: {x: 148.202, y: 54.927}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1434609023
 MonoBehaviour:
@@ -3018,7 +3017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 241}
+  m_AnchoredPosition: {x: 0, y: 232}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1789049541

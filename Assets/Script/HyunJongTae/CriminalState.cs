@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 public class CriminalState : FSM
 {
     private float wTime;
-    private float wCheckTime = 8;
+    private float wCheckTime = 6;
 
     public override void Enter(NPC npc)
     {
-        Debug.Log("Start Criminal State");
         npc.SetWalkState(true);           
     }
 
@@ -18,17 +17,17 @@ public class CriminalState : FSM
     {        
         npc.transform.Translate(Vector2.right * Time.deltaTime * npc.GetWalkSpeed());
         if (npc.reach) npc.Ending();
-        if (npc.player.Dir == Define.MoveDir.None) npc.ChangeState(npc.Idle());
+        //if (npc.player.Dir == Define.MoveDir.None) npc.ChangeState(npc.Idle());
         wTime += Time.deltaTime;
         if (wTime > wCheckTime)
         {
-            npc.SetWalkSpeed(2f);
+            npc.SetWalkSpeed(1.8f);
             wTime = 0;
         }
     }
 
     public override void Exit(NPC npc)
     {
-        Debug.Log("End Criminal State");        
+              
     }
 }
